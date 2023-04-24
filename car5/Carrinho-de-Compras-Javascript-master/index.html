@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Treinamento</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a id="nav-title" href="#" class="navbar-brand"> Shopping Controls</a>
+        </div>
+
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+
+      <div class="form-inline tableList">
+        <div class="form-group">
+          <input type="text" class="form-control" id="desc" placeholder="Description" value="" name="desc">
+        </div>
+        <div class="form-group">
+          <input type="number" class="form-control" id="amount" placeholder="Amaount" value="" name="amount">
+        </div>
+        <div class="form-group">
+          <input type="number" size="10" class="form-control" id="value" placeholder="Value" value="" name="value">
+        </div>
+
+        <span id="btnUpdate" style="display:none;">
+          <span id="inputIDUpdate"></span>
+          <button type="submit" onclick="updateData();" class="btn btn-info ">Save</button>
+          <button type="submit" onclick="resetForm();" class="btn btn-danger">Cancel</button>
+        </span>
+        <span id="btnAdd">
+          <button type="button"  onclick="addData();" class="btn btn-success" name="button">
+              <i class="glyphicon glyphicon-plus"></i>Add
+          </button>
+          <button onclick="resetForm();" type="button" class="btn btn-warning ">Reset</button>
+          <button onclick="deleteList();" type="button" class="btn btn-info ">Clear Data</button>
+        </span>
+      </div>
+      <br>
+      <span class="alert alert-danger" id="errors" style="display:none;">  </span>
+
+      <table id="listTable" class="table">
+      </table>
+
+    </div>
+
+    <<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <h4 class="text-center text-success"> Total: <span id="totalValue">$ 0,00</span></h4>
+      </div>
+    </nav>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script  type="text/javascript"  src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/config.js"> </script>
+    <script type="text/javascript" src="js/main.js"> </script>
+  </body>
+</html>
